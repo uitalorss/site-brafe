@@ -1,0 +1,65 @@
+.menu{
+    background: #252525;
+    padding: 20px 0;
+}
+
+.container{
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.container::after, .container::before{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+a .menu-logo{
+   display: block;
+   float: left;
+}
+
+.menu-nav{
+    float: right;
+}
+
+.menu-nav ul li{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.menu-nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125em;
+}
+
+.intro{
+    background: url("../img/bg-intro.jpg") no-repeat center center;
+    background-size: cover ;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.intro h1{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.intro h1::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    margin: 10px auto;
+}
+
+.intro p{
+    font-style: italic;
+    font-size: 1.125em;
+}
