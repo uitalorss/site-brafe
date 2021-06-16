@@ -110,3 +110,121 @@ a .menu-logo{
     line-height: 1.5em;
 }
 
+/*produtos*/
+.produtos{
+    background: #E7E4D8;
+    border: 3px solid #D6D3C8;
+    padding: 60px 0;
+}
+
+.produtos-item{
+    max-width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px;
+
+}
+
+.produtos-item > h2{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.25em;
+}
+
+.produtos-item > h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #E7E4D8;
+    margin: 20px auto;
+    background: #fff;
+}
+
+.produtos-item > .produtos-paulista::before {
+    background: #492901;
+    box-shadow: 0 0 0 6px #492901;
+}
+
+.produtos-item > .produtos-carioca::before {
+    background: #C17139;
+    box-shadow: 0 0 0 6px #C17139;
+
+}
+
+.produtos-item > .produtos-mineiro::before {
+    background: #D7A54D;
+    box-shadow: 0 0 0 6px #D7A54D;
+
+}
+
+.produtos-item > p{
+    font-size: 0.875em;
+    line-height: 1.125em;
+}
+
+.btn-produto{
+    width: 140px;
+    display: block;
+    font-size: 1.125em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+/*Locais*/
+
+.locais-item{
+    clear: both;
+    margin: 60px 0;
+}
+
+.locais-item::after, .locais-item::before{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.locais-item img{
+    width: 460px;
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item > div{
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item div > h2{
+    font-size: 2.25em;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.locais-item p{
+    max-width: 360px;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    margin-bottom: 25px;
+}
+
+.btn-local{
+    width: 120px;
+    display: block;
+    font-size: 1.125em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    padding: 10px 15px;
+    border: 3px solid #000;
+    text-align: center;
+}
