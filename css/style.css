@@ -4,7 +4,7 @@
 }
 
 .container{
-    max-width: 960px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 0;
     position: relative;
@@ -118,10 +118,9 @@ a .menu-logo{
 }
 
 .produtos-item{
-    max-width: 300px;
+    max-width: 296px;
     float: left;
     margin: 0 10px 20px 10px;
-
 }
 
 .produtos-item > h2{
@@ -258,6 +257,7 @@ a .menu-logo{
     padding: 3px;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 35px;
     padding: 10px;
     float: left;
 
@@ -301,3 +301,131 @@ a .menu-logo{
     margin-top: 10px;
 }
 
+
+/*Responsividade*/
+/*smartphone*/
+@media only screen and (max-width: 739px){
+    .intro h1{
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    .container{
+        max-width: 300px;
+    }    
+    .menu-nav{
+        float: none;
+        clear: both;
+    }
+
+    .intro{
+        padding: 60px;
+    }
+
+    .sobre-item{
+        width: 300px;
+        margin: 0;
+    }
+
+    .produtos-item{
+        max-width: 220px;
+    }
+    
+    .produtos-item > h2{
+        font-size: 2em;
+    }
+    
+    .produtos-item > h2::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .produtos-item > p{
+        font-size: 0.875em;
+        line-height: 1.125em;
+    }
+}
+
+
+/*tablet*/
+@media only screen and (min-width: 720px) and (max-width: 979px){
+    .container{
+        max-width: 720px;
+    }
+
+    .sobre-item{
+        width: 340px;
+    }
+
+    .produtos-item{
+        max-width: 220px;
+    }
+    
+    .produtos-item > h2{
+        font-size: 2em;
+    }
+    
+    .produtos-item > h2::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .produtos-item > p{
+        font-size: 0.875em;
+        line-height: 1.125em;
+    }
+
+    .produtos-item{
+        max-width: 220px;
+        margin: 0 10px auto 10px;
+    }
+    
+    .produtos-item:first-child{
+        margin-left: 0;
+    }
+
+    .locais-item img{
+        width: 340px;
+    }
+
+    .locais-item > div{
+        width: 340px;
+    }
+
+    .locais-item div > h2{
+        font-size: 2em;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .locais-item p{
+        max-width: 360px;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .btn-local{
+        font-size: 1em;
+        padding: 8px 14px;
+    }
+
+    .newsletter h2{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .assine{
+        width: 460px;
+        float: none;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .newsletter form input{
+        width: 340px;
+        margin-left: 0;
+    }
+
+    .footer p{
+        font-size: 1em;
+    }
+}
