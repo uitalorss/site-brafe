@@ -1,513 +1,193 @@
-.menu{
-    background: #252525;
-    padding: 20px 0;
+/* Reset */
+
+body, h1, h2, h3, p, ul {
+	padding: 0px;
+	margin: 0px;
 }
 
-.container{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
+body {
+	font-family: Georgia, serif;
+	color: #252525;
 }
 
-.container::after, .container::before{
-    content: " ";
-    display: table;
-    clear: both;
+* {
+	box-sizing: border-box;
 }
 
-a .menu-logo{
-   display: block;
-   float: left;
+/* Menu */
+
+.menu {
+	background: #252525;
 }
 
-.menu-nav{
-    float: right;
+.menu-nav a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.125em;
 }
 
-.menu-nav ul li{
-    display: inline-block;
-    margin: 10px 0;
+/* Intro */
+
+.intro {
+	background: url('../img/bg-intro.jpg') no-repeat center center;
+	background-size: cover;
+	color: #fff;
 }
 
-.menu-nav a{
-    padding: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.125em;
+.intro h1 {
+	text-transform: uppercase;
+	font-size: 3em;
 }
 
-.intro{
-    background: url("../img/bg-intro.jpg") no-repeat center center;
-    background-size: cover ;
-    padding: 150px 0;
-    text-align: center;
-    color: #fff;
+.intro h1::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: #fff;
 }
 
-.intro h1{
-    font-size: 3em;
-    text-transform: uppercase;
+.intro p {
+	font-style: italic;
+	font-size: 1.125em;
 }
 
-.intro h1::after{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 4px;
-    background: #fff;
-    margin: 10px auto;
+/* Sobre */
+
+.sobre h2 {
+	font-size: 2.25em;
 }
 
-.intro p{
-    font-style: italic;
-    font-size: 1.125em;
+.sobre-item h3 {
+	font-size: 2.25em;
+	line-height: 1em;
+	background: #252525;
+	color: #fff;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	position: relative;
 }
 
-/*Sobre*/
-.sobre{
-    margin: 60px 0;
-
+.sobre > p {
+	font-size: 1.125em;
+	line-height: 1.4em;
+	font-style: italic;
 }
 
-.sobre h2{
-    font-size: 2.25em;
-    text-align: center;
-    margin-bottom: 60px;
+/* Produtos */
+
+.produtos {
+	background: #e7e4d8;
+	border-top: 3px solid #d6d3c8;
+	border-bottom: 3px solid #d6d3c8;
 }
 
-.sobre-item{
-    width: 460px;
-    float: left;
-    margin: 0 10px;
+.produtos-item h2 {
+	font-size: 2.25em;
 }
 
-.sobre-item img{
-    display: block;
-    max-width: 100%;
+.produtos-item h2::before {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: currentColor;
+	border-radius: 50%;
+	border: 5px solid #e7e4d8;
+	box-shadow: 0 0 0 5px currentColor;
 }
 
-.sobre-item h3{
-    font-size: 2.25em;
-    font-style: italic;
-    font-weight: normal;
-    background: #252525;
-    color: #fff;
-    width: 225px;
-    text-align: center;
-    line-height: 1em;
-    padding: 3px 0 10px 0;
-    position: relative;
-    top: -25px;
+h2.produtos-paulista::before {
+	color: #492901;
 }
 
-.sobre > p{
-    font-size: 1.125em;
-    font-style: italic;
-    max-width: 460px;
-    margin: 30px auto;
-    text-align: center;
-    line-height: 1.5em;
+h2.produtos-carioca::before {
+	color: #c17139;
 }
 
-/*produtos*/
-.produtos{
-    background: #E7E4D8;
-    border: 3px solid #D6D3C8;
-    padding: 60px 0;
+h2.produtos-mineiro::before {
+	color: #d7a54d;
 }
 
-.produtos-item{
-    max-width: 296px;
-    float: left;
-    margin: 0 10px 20px 10px;
+.produtos-item p {
+	font-size: 0.875em;
+	line-height: 1.4em;
 }
 
-.produtos-item > h2{
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2.25em;
+.produtos-btn {
+	border: 3px solid #252525;
+	color: #252525;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.125em;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.produtos-item > h2::before {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid #E7E4D8;
-    margin: 20px auto;
-    background: #fff;
+/* Locais */
+
+.locais-item h2 {
+	font-size: 2.25em;
 }
 
-.produtos-item > .produtos-paulista::before {
-    background: #492901;
-    box-shadow: 0 0 0 6px #492901;
+.locais-item p {
+	font-size: 1.125em;
+	line-height: 1.4em;
 }
 
-.produtos-item > .produtos-carioca::before {
-    background: #C17139;
-    box-shadow: 0 0 0 6px #C17139;
-
+.locais-item a {
+	font-size: 1.125em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 3px solid;
+	color: #252525;
 }
 
-.produtos-item > .produtos-mineiro::before {
-    background: #D7A54D;
-    box-shadow: 0 0 0 6px #D7A54D;
+/* Assine */
 
+.assine {
+	background: #e7e4d8;
 }
 
-.produtos-item > p{
-    font-size: 0.875em;
-    line-height: 1.125em;
+.assine-info h2 {
+	font-size: 2.25em;
 }
 
-.btn-produto{
-    width: 140px;
-    display: block;
-    font-size: 1.125em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    padding: 10px 30px;
-    border: 3px solid #000;
-    text-align: center;
-    margin: 20px auto 0 auto;
+.assine-info p {
+	font-size: 1.5em;
+	font-style: italic;
 }
 
-/*Locais*/
-
-.locais-item{
-    clear: both;
-    margin: 60px 0;
+.assine form label {
+	display: none;
 }
 
-.locais-item::after, .locais-item::before{
-    content: " ";
-    display: table;
-    clear: both;
+.assine input {
+	border: 3px solid #252525;
+	background: none;
+	font-size: 1.5em;
+	font-style: italic;
+	font-family: Georgia, serif;
 }
 
-.locais-item img{
-    width: 460px;
-    display: block;
-    float: left;
-    margin: 0 10px;
+.assine button {
+	background: #252525;
+	border: none;
+	font-family: Georgia, serif;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	color: #fff;
+	cursor: pointer;
 }
 
-.locais-item > div{
-    width: 460px;
-    float: left;
-    margin: 0 10px;
+/*Footer*/
+
+.footer {
+	background: #d6d3c8;
 }
 
-.locais-item div > h2{
-    font-size: 2.25em;
-    width: 100px;
-    margin-bottom: 15px;
-}
-
-.locais-item p{
-    max-width: 360px;
-    font-size: 1.125em;
-    line-height: 1.5em;
-    margin-bottom: 25px;
-}
-
-.btn-local{
-    width: 120px;
-    display: block;
-    font-size: 1.125em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    padding: 10px 15px;
-    border: 3px solid #000;
-    text-align: center;
-}
-
-/*newsletter*/
-.newsletter{
-    padding: 35px 0;
-    background:#E7E4D8;
-}
-
-.newsletter h2{
-    font-size: 2.25em;
-    line-height: 1.5em;
-}
-
-.newsletter p{
-    font-size: 1.125em;
-    font-style: italic;
-}
-
-.newsletter form{
-    margin: 10px 0 0 10px;
-}
-
-.newsletter form input{
-    box-sizing: border-box;
-    width: 320px;
-    background: none;
-    font-size: 1.5em;
-    border: solid 3px #000;
-    padding: 3px;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 35px;
-    padding: 10px;
-    float: left;
-
-}
-
-.newsletter form button{
-    width: 140px;
-    padding: 16px 0;
-    background: #000;
-    border: none;
-    color: #fff;
-    font-size: 1.125em;
-    text-transform: uppercase;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-}
-
-.newsletter form label{
-    display: none;
-}
-
-.assine{
-    width: 460px;
-    float: left;
-}
-
-/*footer*/
-.footer{
-    background: #D6D3C8; 
-    padding: 30px 0;  
-}
-
-.footer p{
-    float: left;
-    font-size: 1.125em;
-    line-height: 1.5em;
-}
-
-.footer img{
-    float: right;
-    margin-top: 10px;
-}
-
-
-/*Responsividade*/
-/*smartphone*/
-@media only screen and (max-width: 739px){
-    .menu-logo{
-        margin: 0 80px;
-    }
-
-    .intro h1{
-        font-size: 2em;
-        text-transform: uppercase;
-    }
-    .container{
-        max-width: 300px;
-        margin: 0 auto;
-    }    
-    .menu-nav{
-        width: 300px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .menu-nav a{
-        padding: 10px 3px;
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.125em;
-    }
-
-    .intro{
-        padding: 60px;
-    }
-
-    .sobre-item{
-        width: 300px;
-        margin: 0;
-    }
-
-    .sobre > p{
-        font-size: 1em;
-        font-style: italic;
-        max-width: 300px;
-    }
-
-    .produtos{
-        padding: 40px 0;
-    }
-    .produtos-item{
-        max-width: 220px;
-        float: none;
-        margin: 0 auto 20px auto;
-    }
-    
-    .produtos-item > h2{
-        font-size: 2em;
-    }
-    
-    .produtos-item > h2::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .produtos-item > p{
-        font-size: 0.875em;
-        line-height: 1.125em;
-    }
-
-    .locais-item img{
-        width: 300px;
-        margin: 0;
-    }
-
-    .locais-item > div{
-        width: 300px;
-        margin: 0;
-    }
-
-    .assine {
-        width: 300px;
-        float: left;
-    }
-
-    .newsletter {
-        padding: 20px 0;
-        background: #E7E4D8;
-    }
-
-    .newsletter h2 {
-        font-size: 1.5em;
-        line-height: 1.5em;
-    }
-
-    .newsletter form input {
-        margin-top: 10px;
-        width: 300px;
-        margin-left: 0;
-        float: none;
-
-    }
-
-    .newsletter form {
-        margin: 0;
-    }
-
-    .footer {
-        background: #D6D3C8;
-        padding: 15px 0;
-    }
-
-    .footer p {
-        float: none;
-        font-size: 0.7em;
-        line-height: 1.5em;
-    }
-
-    .footer img {
-        float: none;
-        margin: 10px 80px
-    }
-
-
-}
-
-
-/*tablet*/
-@media only screen and (min-width: 740px) and (max-width: 979px){
-    .container{
-        max-width: 720px;
-    }
-
-    .sobre-item{
-        width: 340px;
-    }
-
-    .produtos-item{
-        max-width: 220px;
-    }
-    
-    .produtos-item > h2{
-        font-size: 2em;
-    }
-    
-    .produtos-item > h2::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .produtos-item > p{
-        font-size: 0.875em;
-        line-height: 1.125em;
-    }
-
-    .produtos-item{
-        max-width: 220px;
-        margin: 0 10px auto 10px;
-    }
-    
-    .produtos-item:first-child{
-        margin-left: 0;
-    }
-
-    .locais-item img{
-        width: 340px;
-    }
-
-    .locais-item > div{
-        width: 340px;
-    }
-
-    .locais-item div > h2{
-        font-size: 2em;
-        width: 100px;
-        margin-bottom: 10px;
-    }
-    
-    .locais-item p{
-        max-width: 360px;
-        font-size: 1em;
-        margin-bottom: 15px;
-    }
-
-    .btn-local{
-        font-size: 1em;
-        padding: 8px 14px;
-    }
-
-    .newsletter h2{
-        font-size: 2em;
-        line-height: 1.5em;
-    }
-
-    .assine{
-        width: 460px;
-        float: none;
-        margin-left: 10px;
-        margin-bottom: 20px;
-    }
-    .newsletter form {
-        margin: 0;
-    }
-
-    .newsletter form input{
-        width: 340px;
-        margin-left: 0;
-    }
-
-    .footer p{
-        font-size: 1em;
-    }
+.footer p {
+	font-size: 1.125em;
+	line-height: 1.4em;
 }
