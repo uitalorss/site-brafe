@@ -14,10 +14,17 @@ body {
 	box-sizing: border-box;
 }
 
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+}
+
 /* Menu */
 
 .menu {
 	background: #252525;
+	padding: 20px 0;
 }
 
 .menu-nav a {
@@ -26,12 +33,29 @@ body {
 	font-size: 1.125em;
 }
 
+.menu-nav{
+	flex: 1;
+	align-self: center;
+}
+
+.menu-nav ul{
+	float: right;
+	display: flex;
+	list-style: none;
+}
+
+.menu-nav ul li a{
+	padding: 20px;
+}
+
 /* Intro */
 
 .intro {
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
+	padding: 120px 0;
+	text-align: center;
 }
 
 .intro h1 {
@@ -45,6 +69,7 @@ body {
 	width: 20px;
 	height: 4px;
 	background: #fff;
+	margin: 10px auto;
 }
 
 .intro p {
@@ -54,8 +79,24 @@ body {
 
 /* Sobre */
 
+.sobre{
+	padding: 60px 0;
+}
+
 .sobre h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.sobre-item{
+	flex: 1;
+	margin: 0 10px;
+}
+
+.sobre-item img{
+	display: block;
+	max-width: 100%;
 }
 
 .sobre-item h3 {
@@ -67,12 +108,19 @@ body {
 	font-weight: normal;
 	text-align: center;
 	position: relative;
+	max-width: 220px;
+	padding: 5px 0 10px 0; 
+	top: -25px
 }
 
 .sobre > p {
 	font-size: 1.125em;
 	line-height: 1.4em;
 	font-style: italic;
+	max-width: 460px;
+	padding-top: 40px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 /* Produtos */
@@ -81,10 +129,13 @@ body {
 	background: #e7e4d8;
 	border-top: 3px solid #d6d3c8;
 	border-bottom: 3px solid #d6d3c8;
+	padding: 60px 0
 }
 
 .produtos-item h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .produtos-item h2::before {
@@ -96,6 +147,12 @@ body {
 	border-radius: 50%;
 	border: 5px solid #e7e4d8;
 	box-shadow: 0 0 0 5px currentColor;
+	margin: 10px auto 10px auto;
+}
+
+.produtos-item{
+	margin: 0 10px 30px 10px;
+	flex: 1;
 }
 
 h2.produtos-paulista::before {
@@ -123,31 +180,77 @@ h2.produtos-mineiro::before {
 	font-size: 1.125em;
 	font-weight: bold;
 	text-transform: uppercase;
+	display: block;
+	width: 180px;
+	padding: 10px 5px;
+	margin: 20px auto 0 auto;
 }
 
 /* Locais */
 
+.locais{
+	padding-top: 60px;
+}
+
+.locais-item{
+	padding-bottom: 60px;
+	flex: 1;
+}
+
+.locais-img{
+	flex: 1;
+}
+
+.locais-info{
+	flex: 1;
+}
+
+.locais-img img{
+	display: block;
+	max-width: 100%;
+}
+
 .locais-item h2 {
 	font-size: 2.25em;
+	padding-bottom: 20px;
 }
 
 .locais-item p {
 	font-size: 1.125em;
 	line-height: 1.4em;
+	padding-bottom: 20px;
+	max-width: 320px;
 }
 
 .locais-item a {
 	font-size: 1.125em;
 	text-transform: uppercase;
 	text-decoration: none;
+	font-weight: bold;
 	border: 3px solid;
 	color: #252525;
+	display: block;
+	width: 150px;
+	padding: 10px 20px;
 }
 
 /* Assine */
 
 .assine {
 	background: #e7e4d8;
+	padding: 30px 0
+}
+
+.assine-info{
+	flex: 1;
+	margin: 0 10px;
+}
+
+.assine form{
+	flex: 1;
+	margin: 0 10px;
+	align-self: center;
+	display: flex;
 }
 
 .assine-info h2 {
@@ -169,6 +272,8 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	font-style: italic;
 	font-family: Georgia, serif;
+	width: 320px;
+	padding: 15px;
 }
 
 .assine button {
@@ -179,15 +284,116 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	color: #fff;
 	cursor: pointer;
+	padding: 0 20px; 
 }
 
 /*Footer*/
 
 .footer {
 	background: #d6d3c8;
+	padding: 30px 0;
 }
 
 .footer p {
 	font-size: 1.125em;
 	line-height: 1.4em;
+	margin: 0 10px;
+	flex: 1;	
+}
+
+.footer-img{
+	margin: 0 10px;
+}
+
+@media only screen and (max-width: 739px) {
+	.container{
+		width: 300px;
+		flex-direction: column;
+	}
+
+	.menu-logo{
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+
+	.menu-nav ul li a{
+		padding: 0 15px 0 15px;
+	}
+
+	.intro {
+		padding: 60px 0;
+	}
+
+	.intro h1 {
+		font-size: 2.25em;
+	}
+
+	.sobre{
+		padding: 30px 0;
+	}
+
+	.sobre h2 {
+		margin-bottom: 30px;
+	}
+
+	.sobre > p {
+		padding-top: 20px;
+		max-width: 300px;
+	}
+
+	.sobre-item h3 {
+		margin: 0;
+		font-size: 1.5em;
+		max-width: 160px;
+	}
+
+	.produtos {
+		padding: 30px 0;
+	}
+
+	.produtos-item {
+		margin: 0 0 30px ;
+		flex: 1;
+	}
+
+	.locais {
+		padding-top: 30px;
+	}
+
+	.locais-item {
+		padding-bottom: 30px;
+		flex: 1;
+	}
+
+	.assine-info {
+		flex: 1;
+		margin: 0 10px 20px 10px;
+	}
+
+	.assine form {
+		align-self:flex-start;
+		flex-direction: column;
+	}
+
+	.assine input {
+		font-size: 1em;
+		width: 260px;
+	}
+
+	.assine button {
+		margin-top: 5px;
+		padding: 10px 20px;
+	}
+
+	.footer p {
+		font-size: 0.9em;
+		line-height: 1.4em;
+		margin: 0;
+		flex: 1;
+	}
+
+	.footer-img {
+		margin: 10px auto 0 auto;
+	}
+
 }
