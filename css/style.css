@@ -14,10 +14,9 @@ body {
 	box-sizing: border-box;
 }
 
-.container{
-	max-width: 960px;
-	margin: 0 auto;
-	display: flex;
+img{
+	display: block;
+	max-width: 100%;
 }
 
 /* Menu */
@@ -33,19 +32,49 @@ body {
 	font-size: 1.125em;
 }
 
-.menu-nav{
-	flex: 1;
-	align-self: center;
+.menu-nav ul li a{
+	padding: 0 15px 0 15px;
 }
 
 .menu-nav ul{
 	float: right;
-	display: flex;
 	list-style: none;
+	display: flex;
+	text-align: center;
+}
+
+.menu img{
+	margin: 0 auto;
+	padding: 0 0 10px 0;
+}
+
+.menu-nav{
+	align-self: center;
+}
+
+.menu-nav ul li{
+	padding-right: 10px;
 }
 
 .menu-nav ul li a{
-	padding: 20px;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.menu-nav ul{
+		float: none;
+	}
+
+	.menu-nav ul li{
+		margin: 0 auto;
+	}
+
+	.menu-nav ul li a{
+		padding: 0;
+		margin-left: 0;
+	}
+	
 }
 
 /* Intro */
@@ -54,13 +83,16 @@ body {
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
-	padding: 120px 0;
-	text-align: center;
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 
 .intro h1 {
 	text-transform: uppercase;
 	font-size: 3em;
+	text-align: center;
+	font-weight: bold;
+
 }
 
 .intro h1::after {
@@ -75,28 +107,31 @@ body {
 .intro p {
 	font-style: italic;
 	font-size: 1.125em;
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.intro {	
+		padding: 80px 0
+	}
+
+	.intro h1 {
+		font-size: 2.5em;
+	}
 }
 
 /* Sobre */
 
 .sobre{
-	padding: 60px 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .sobre h2 {
 	font-size: 2.25em;
+	margin-bottom: 40px;
 	text-align: center;
-	margin-bottom: 60px;
-}
-
-.sobre-item{
-	flex: 1;
-	margin: 0 10px;
-}
-
-.sobre-item img{
-	display: block;
-	max-width: 100%;
+	font-weight: bold;
 }
 
 .sobre-item h3 {
@@ -109,33 +144,51 @@ body {
 	text-align: center;
 	position: relative;
 	max-width: 220px;
-	padding: 5px 0 10px 0; 
-	top: -25px
+	padding: 8px 5px;
+	top: -25px;
 }
-
 .sobre > p {
 	font-size: 1.125em;
 	line-height: 1.4em;
 	font-style: italic;
 	max-width: 460px;
-	padding-top: 40px;
-	margin: 0 auto;
+	margin: 40px auto 0 auto;
 	text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+	.sobre{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.sobre-item h3 {
+		font-size: 2em;
+		max-width: 180px;
+	}
+
+	.sobre > p {
+		margin: 20px auto 0 auto;
+	}
+}
 /* Produtos */
 
 .produtos {
 	background: #e7e4d8;
 	border-top: 3px solid #d6d3c8;
 	border-bottom: 3px solid #d6d3c8;
-	padding: 60px 0
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.produtos-item{
+	margin-bottom: 40px;
 }
 
 .produtos-item h2 {
 	font-size: 2.25em;
+	font-weight: bold;
 	text-align: center;
-	margin-bottom: 20px;
 }
 
 .produtos-item h2::before {
@@ -147,12 +200,7 @@ body {
 	border-radius: 50%;
 	border: 5px solid #e7e4d8;
 	box-shadow: 0 0 0 5px currentColor;
-	margin: 10px auto 10px auto;
-}
-
-.produtos-item{
-	margin: 0 10px 30px 10px;
-	flex: 1;
+	margin: 0 auto 10px auto;
 }
 
 h2.produtos-paulista::before {
@@ -180,10 +228,10 @@ h2.produtos-mineiro::before {
 	font-size: 1.125em;
 	font-weight: bold;
 	text-transform: uppercase;
-	display: block;
 	width: 180px;
-	padding: 10px 5px;
+	display: block;
 	margin: 20px auto 0 auto;
+	padding: 10px;
 }
 
 /* Locais */
@@ -193,73 +241,57 @@ h2.produtos-mineiro::before {
 }
 
 .locais-item{
-	padding-bottom: 60px;
-	flex: 1;
-}
-
-.locais-img{
-	flex: 1;
-}
-
-.locais-info{
-	flex: 1;
-}
-
-.locais-img img{
-	display: block;
-	max-width: 100%;
+	margin-bottom: 60px;
 }
 
 .locais-item h2 {
 	font-size: 2.25em;
-	padding-bottom: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .locais-item p {
 	font-size: 1.125em;
 	line-height: 1.4em;
-	padding-bottom: 20px;
 	max-width: 320px;
+	margin-bottom: 20px;
 }
 
 .locais-item a {
 	font-size: 1.125em;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-weight: bold;
 	border: 3px solid;
 	color: #252525;
-	display: block;
 	width: 150px;
-	padding: 10px 20px;
+	text-align: center;
+	display: block;
+	padding: 5px 10px
 }
 
 /* Assine */
 
 .assine {
 	background: #e7e4d8;
-	padding: 30px 0
-}
-
-.assine-info{
-	flex: 1;
-	margin: 0 10px;
-}
-
-.assine form{
-	flex: 1;
-	margin: 0 10px;
-	align-self: center;
-	display: flex;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .assine-info h2 {
+	font-weight: bold;
 	font-size: 2.25em;
 }
 
 .assine-info p {
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+.assine form{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-self: center;
 }
 
 .assine form label {
@@ -272,8 +304,7 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	font-style: italic;
 	font-family: Georgia, serif;
-	width: 320px;
-	padding: 15px;
+	padding: 5px 10px;
 }
 
 .assine button {
@@ -284,116 +315,33 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	color: #fff;
 	cursor: pointer;
-	padding: 0 20px; 
+	padding: 5px 10px;
 }
 
 /*Footer*/
 
 .footer {
 	background: #d6d3c8;
-	padding: 30px 0;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .footer p {
 	font-size: 1.125em;
 	line-height: 1.4em;
-	margin: 0 10px;
-	flex: 1;	
 }
 
-.footer-img{
-	margin: 0 10px;
+.footer img{
+	float: right;
 }
 
-@media only screen and (max-width: 739px) {
-	.container{
-		width: 300px;
-		flex-direction: column;
-	}
-
-	.menu-logo{
-		margin: 0 auto;
-		padding-bottom: 10px;
-	}
-
-	.menu-nav ul li a{
-		padding: 0 15px 0 15px;
-	}
-
-	.intro {
-		padding: 60px 0;
-	}
-
-	.intro h1 {
-		font-size: 2.25em;
-	}
-
-	.sobre{
-		padding: 30px 0;
-	}
-
-	.sobre h2 {
-		margin-bottom: 30px;
-	}
-
-	.sobre > p {
-		padding-top: 20px;
-		max-width: 300px;
-	}
-
-	.sobre-item h3 {
-		margin: 0;
-		font-size: 1.5em;
-		max-width: 160px;
-	}
-
-	.produtos {
-		padding: 30px 0;
-	}
-
-	.produtos-item {
-		margin: 0 0 30px ;
-		flex: 1;
-	}
-
-	.locais {
-		padding-top: 30px;
-	}
-
-	.locais-item {
-		padding-bottom: 30px;
-		flex: 1;
-	}
-
-	.assine-info {
-		flex: 1;
-		margin: 0 10px 20px 10px;
-	}
-
-	.assine form {
-		align-self:flex-start;
-		flex-direction: column;
-	}
-
-	.assine input {
-		font-size: 1em;
-		width: 260px;
-	}
-
-	.assine button {
-		margin-top: 5px;
-		padding: 10px 20px;
-	}
-
+@media only screen and (max-width: 768px) {
 	.footer p {
-		font-size: 0.9em;
-		line-height: 1.4em;
-		margin: 0;
-		flex: 1;
+		font-size: 1em;
 	}
 
-	.footer-img {
-		margin: 10px auto 0 auto;
+	.footer img{
+		float: none;
+		margin: 0 auto;	
 	}
-
 }
